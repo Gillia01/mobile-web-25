@@ -1,84 +1,46 @@
-/* The first rule sets the page background to an image thatt repeasts horizontally and matches the background color. */
-* {
-    margin: 0px;
-    padding: 0px;
-}
-
+/* General body styling */
 body {
-	background-color: #171717;
-	background-image: url('../img/background.jpg');
-	background-repeat: repeat-x;
-    text-align: center;
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-	font-size: 16px;
-	line-height: 1.5em;
-	color: #FFFFFF;
-	
-}
-#container {
-	max-width: 800px;
-	margin-right: auto;
-	margin-left: auto;
-	text-align: left;
-	background-color: #FFF;
-	margin-top: 20px;
-	border: 1px solid #CCC;
-	color: #FFFFFF;
+    font-size: 16px;
+    line-height: 1.5em;
+    background-color: #171717;
+    color: #FFFFFF;
 }
 
-#content p {
-	color: inherit;
+/* Header image replacement */
+header h1 {
+    position: absolute;
+    left: -9999px;
+    top: -9999px; /* Hides the text visually */
+    visibility: hidden;
 }
 
-#header {
+/* Alert class for the second paragraph */
+.alert {
+    background-color: #FFD700; /* Gold background */
+    color: #000000; /* Black text for contrast */
+    padding: 10px;
+    border-radius: 5px;
 }
-#header h1 a {
+
+/* Styling for different headings */
+h2 {
+    color: #87CEEB; /* Light blue */
 }
-#nav {
-	background-color: #000;
+
+h3 {
+    color: #FFD700; /* Gold */
 }
-#nav ul {
-	list-style-type: none;
-	margin-left: 10px;
+
+h4 {
+    color: #32CD32; /* Lime green */
 }
-#nav ul li {
-	display: inline;
-	height: 35px;
-	line-height: 35px;
-}
-#nav ul li a {
-	display: inline-block;
-	padding-right: 10px;
-	padding-left: 10px;
-	font-size: 18px;
-}
-#nav ul li a:link, #nav ul li a:visited {
-	text-decoration: none;
-	border-bottom-width: 4px;
-	border-bottom-style: solid;
-	border-bottom-color: #000;
-	color: #FFF;
-}
-#nav ul li a:hover {
-	border-bottom-width: 3px;
-	border-bottom-style: solid;
-	border-bottom-color: #CCC;
-}
-#content {
-	margin: 20px;
-}
-#content p {
-	margin-top: 5px;
-	margin-bottom: 15px;
-}
+
+/* Footer styling */
 #footer {
-	background-color: #000;
-	color: #FFF;
-	height: 25px;
-}
-#footer h6 {
-	font-size: 12px;
-	line-height: 25px;
-	margin-right: 20px;
-	margin-left: 20px;
+    text-align: center;
+    padding: 10px;
+    background-color: #000;
+    color: #FFF;
+    font-size: 14px;
 }

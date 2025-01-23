@@ -21,39 +21,66 @@
          
             
         }
+        header {
+            text-align: center;
+            margin: 20px auto;
+            position: relative;
+        }
+        header img {
+            width: 800px;
+            height: 140px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        header h1 {
+            position: absolute;
+            left: -9999px;
+            top: -9999px;
+            visibility: hidden;
+        }
     </style>
 </head>
 <body>
-    <h1>IFSC 3342 Pre-Assessment-Alex Gilliam</h1>
-    <h2>UALR</h2>
+    <header>
+        <a href="index.html">
+            <img src="./assets/resources/header.jpg" alt="Header Image with Alex Gilliam " width="800" height="140">
+        </a>
+        <h1>Alex Gilliam</h1> <!--Hidden text for accessibility -->
+    </header>
+
+    <h2>UALR <!-- Hey Thomas! --></h2>
     <ul>
      <li><a href= "#">Course Homepage </a></li>
      <li><a href = "#"> W3C </a></li>
      <li><a href = "#"> My Assessment </a></li>
+     <li><a href="https://example.com" title="Additional Link">Additional Link</a></li>
     </ul>
 
     <p>The most important goal of effective communication is clarity. Clarity is not the same as simplicity . Often, simple things are clear if the message is intended to be brief and small, but often the message is about a complex relationship that can only be presented with a necessarily large amount of data.</p>
     
-    <p>This complexity can be made to appear clear by effective organization and presentation and need not be reduced to meaningless "bite-sized" chunks of data, as simplification usually does.</p>
+    <p class="alert">This complexity can be made to appear clear by effective organization and presentation and need not be reduced to meaningless "bite-sized" chunks of data, as simplification usually does.</p>
     
     <p>Clarity refers to the focus on one particular message or goal at a time, rather than attempting to accomplish too much at once. Simplicity is often responsible for the "dumbing" of information rather than the illumination of it.</p>
     
     <h3>Questions</h3>
 
     <ol>
-    <li>Please answer the following questions below. Remember to markup the information properly using HTML.
-        <p>Answer goes here.... </p>
-    </li>
+        <p>Please answer the following questions below. Remember to markup the information properly using HTML.</p>
+        
     
     <li>Explain the difference between the "alt" attribute and the "title" attribute.
-    <p>Answer goes here...</p>
+    <p>Alt text is used to describe an image for users who are visually impaired or can't view the image. Title text is a tooltipl when a user hovers over an element, providing additional information or context </p>
     </li>
     <li>Please provide an example below of how to mark up a definition from the dictionary</li>
-    <p>Answer goes here...</p>
+    <p></p>
     
     <li>Provide an example of link pointing to your favorite site & create a style rule to change the background color of the link when the user hovers over it.</li>
     <p>Answer goes here...</p>
 
-
+</ol>
+<footer id="footer">
+    &copy; 2025 Alex Gilliam | <a href="#top"> Back to Top</a>
+</footer>
 </body>
 </html>
