@@ -1,0 +1,51 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+main {
+  max-width: 960px;
+  flex: 1; /* Takes up remaining space */
+  border: 1px solid #000;
+  margin: 20px;
+  padding: 20px;
+}
+
+/* Sidebar Styling */
+aside {
+  width: 250px; /* Sidebar width */
+  background: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  position: relative; /* Moves with the page */
+}
+
+aside ul {
+  list-style: none;
+  padding: 0;
+}
+
+aside ul li {
+  background: #333;
+  color: white;
+  padding: 10px;
+  margin: 5px 0;
+}
+
+/* Ensures main content and sidebar are aligned */
+.container {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px; /* Space between sidebar and content */
+  width: 100%;
+}
