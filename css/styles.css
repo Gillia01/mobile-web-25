@@ -36,3 +36,19 @@ footer {
     background: #333;
     color: white;
 }
+
+/* Tablet Optimization */
+@media (max-width: 1024px) {
+    body {
+        font-size: 1em;
+    }
+
+    header {
+        font-size: 1.4em;
+        padding: 18px;
+    }
+
+    nav ul li{
+        margin: 0 10px;
+    }
+}
