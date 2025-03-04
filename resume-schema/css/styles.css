@@ -1,247 +1,312 @@
-/*! HTML5 Boilerplate v9.0.0-RC1 | MIT License | https://html5boilerplate.com/ */
-
-/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
-
-html {
-  color: #222;
-  font-size: 1em;
-  line-height: 1.4;
+/* Default Styles 
+--------------------------------------------------- */
+body {
+	/* General body styling */
+	margin: 0px;
+	padding: 0px;
+	background: url("../images/bg_dark_green.png");  /* Set background image */
+	background-color: inherit;
+	font-size: 16px; 
+	font-family: "Trebuchet MS", Helvetica, sans-serif; /* Set font styles */
+	color: #000; /* Set text color */
 }
 
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * Customize the background color to match your design.
- */
-
-::-moz-selection {
-  background: #b3d4fc;
-  text-shadow: none;
+/* Link Styling */
+a:link { 
+	/* Default state of links */
+	text-decoration: underline;
+	color: #000;
+	font-weight: bold;
+}
+a:visited { 
+	/* Visited state of links */
+	text-decoration: underline;
+	color: #000;
+	font-weight: bold;
+}
+a:hover { 
+	/* Hover state of links */
+	text-decoration: underline;
+	color: #669933; /* Change color on hover */
+	font-weight: bold;
+}
+a:active { 
+	/* Active state of links */
+	text-decoration: underline;
+	color: #000;
+	font-weight: bold;
 }
 
-::selection {
-  background: #b3d4fc;
-  text-shadow: none;
+/* Wrapper Styling */
+#wrapper {
+	/* Container to center content */
+	width: 965px;
+	margin: 0 auto;	
 }
 
-/*
- * A better looking default horizontal rule
- */
-
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
+/* Content Styling */
+#content {
+	/* Main content container */
+	background-color: #eee;
+	width: 960px;
+	text-align: left;
+	overflow: auto; /* Enable scroll if content overflows */
+	position: relative;
+	margin: 25px 0px 25px 0px;
+	border: #fff solid 2px;
 }
 
-/*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
-
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-  vertical-align: middle;
+/* Clearfix to clear floated elements */
+.clear {
+	float: none;
+	clear: both;
+	margin: 20px 0px 20px 0px;
 }
 
-/*
- * Remove default fieldset styles.
- */
-
-fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
+/* Header Styling 
+--------------------------------------------------- */
+#contact-details .header_1 {
+	/* Styling for first header in contact details */
+	float: left;
+	width: 350px;
+	text-align: center;
+	margin: 40px 0px 0px 20px;
 }
 
-/*
- * Allow only vertical resizing of textareas.
- */
-
-textarea {
-  resize: vertical;
+#contact-details .header_1 img {
+	/* Styling for images inside the first header */
+	border: #fff solid 4px;
+	background: url("../images/bg_img_dark_green.png"); /* Background for image */
+	padding: 16px;
+	margin: 10px 0px 0px 0px;
 }
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Hide visually and from screen readers
- */
-
-.hidden,
-[hidden] {
-  display: none !important;
+#contact-details .header_2 {
+	/* Styling for second header in contact details */
+	float: left;
+	width: 570px;
+	margin: 40px 0px 0px 10px;
 }
 
-/*
- * Hide only visually, but have it available for screen readers:
- * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- *
- * 1. For long content, line feeds are not interpreted as spaces and small width
- *    causes content to wrap 1 word per line:
- *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
- */
-
-.visually-hidden {
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  /* 1 */
+#contact-details .header_2 a {
+	/* Remove bold from links in second header */
+	font-weight: normal;
 }
 
-/*
- * Extends the .visually-hidden class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
-
-.visually-hidden.focusable:active,
-.visually-hidden.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  white-space: inherit;
-  width: auto;
+#contact-details h1 {
+	/* Styling for main header (h1) */
+	margin: 0px 0px 0px 20px;
+	font-size: 52px;
+	font-weight: bold;
 }
 
-/*
- * Hide visually and from screen readers, but maintain layout
- */
-
-.invisible {
-  visibility: hidden;
+#contact-details h3 {
+	/* Styling for subheader (h3) */
+	margin: 0px 0px 32px 20px;
+	font-size: 30px;
+	font-weight: bold;
+	font-style: italic;
 }
 
-/*
- * Clearfix: contain floats
- *
- * The use of `table` rather than `block` is only necessary if using
- * `::before` to contain the top-margins of child elements.
- */
-
-.clearfix::before,
-.clearfix::after {
-  content: "";
-  display: table;
+#contact-details ul.info_1, #contact-details ul.info_2 {
+	/* Styling for unordered lists */
+	list-style: none;
+	margin: 0px 0px 0px -12px;
+	font-size: 18px;
 }
 
-.clearfix::after {
-  clear: both;
+/* Styling for list items with icons */
+#contact-details li.address {
+    background: url("../images/home.png") no-repeat;
+	background-position: 0px 0px;
+    padding: 0px 0px 12px 40px;
+}
+#contact-details li.phone {
+    background: url("../images/phone.png") no-repeat;
+	background-position: 0px 0px;
+    padding: 0px 0px 12px 40px;
+}
+#contact-details li.email {
+    background: url("../images/mail.png") no-repeat;
+	background-position: 0px 0px;
+    padding: 0px 0px 12px 40px;
+}
+#contact-details li.site_url {
+    background: url("../images/computer.png") no-repeat;
+	background-position: 0px 2px;
+    padding: 0px 0px 12px 40px;
+}
+#contact-details li.twitter {
+    background: url("../images/twitter_sm.png") no-repeat;
+	background-position: 0px 0px;
+    padding: 0px 0px 12px 40px;
 }
 
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+/* Main Content 
+--------------------------------------------------- */
+h2.top {
+	/* Styling for the top-level h2 */
+	margin: 0px; 
+	font-size: 22px;
+	font-weight: bold;
 }
 
-@media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
+h2 {
+	/* General styling for h2 headers */
+	margin: 40px 0px 0px 0px; 
+	font-size: 22px;
+	font-weight: bold;
 }
 
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
-
-@media print {
-  *,
-  *::before,
-  *::after {
-    background: #fff !important;
-    color: #000 !important;
-    /* Black prints faster */
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
-
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
-
-  a[href]::after {
-    content: " (" attr(href) ")";
-  }
-
-  abbr[title]::after {
-    content: " (" attr(title) ")";
-  }
-
-  /*
-   * Don't show links that are fragment identifiers,
-   * or use the `javascript:` pseudo protocol
-   */
-  a[href^="#"]::after,
-  a[href^="javascript:"]::after {
-    content: "";
-  }
-
-  pre {
-    white-space: pre-wrap !important;
-  }
-
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
-
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-
-  h2,
-  h3 {
-    page-break-after: avoid;
-  }
+dl {
+	/* Styling for definition lists */
+	margin: 0px 50px 0px 0px;
 }
 
+dt {
+	/* Styling for definition term */
+	float: left;
+	width: 200px;
+	font-size: 20px;
+	font-weight: bold;
+	font-style: italic;
+	text-align: right;
+}
+
+dd {
+	/* Styling for definition description */
+	width: 620px; 
+	float: right;
+	margin-right: 20px;
+}
+
+dl#contact {
+	/* Styling for contact definition list */
+	margin: 0px;
+}
+
+dt#contact {
+	/* Styling for contact definition term */
+	margin: 0px;
+}
+
+dd#contact {
+	/* Styling for contact definition description */
+	margin: 0px;
+}
+
+p.bus1 {
+	/* Business paragraph styling */
+	margin: 0px;
+	font-weight: bold;
+	color: #669933;
+}
+
+p.edu-info {
+	/* Educational paragraph styling */
+	margin: 10px 0px 0px 0px;
+	font-weight: bold;
+	color: #669933;
+}
+
+p.edu-info a {
+	/* Link styling in educational info */
+	color: #000;
+}
+
+p.edu-info a:hover {
+	/* Hover state for links in educational info */
+	color: #669933;
+}
+
+p.time {
+	/* Time paragraph styling */
+	margin: 0px;
+}
+
+p.summary {
+	/* Summary paragraph styling */
+	margin: 10px 0px 0px 0px;
+}
+
+/* Skills List Styling */
+#skills ul.list1, #skills ul.list2 {
+	/* Styling for skill lists */
+	float: left;
+	list-style: none;
+	margin: 0px 0px 0px -40px;
+	width: 220px;
+}
+
+#skills li {
+	/* Styling for each list item */
+    background: url("../images/bullet_green.png") no-repeat;
+	background-position: 0px 2px;
+    padding: 0px 0px 0px 25px;
+}
+
+abbr {
+	/* Remove border from abbr elements */
+	border-width: 0px;
+}
+
+/* Footer 
+--------------------------------------------------- */
+#footer {
+	/* Footer container styling */
+	margin: 60px 40px 0px 40px;
+}
+
+#footer img {
+	/* Remove border from footer images */
+	border: 0px;
+}
+
+#footer .footer_content {
+	/* Footer content container */
+	width: 700px;
+	overflow: auto;
+	margin: auto;
+	border: #fff solid 2px;
+	background-color: #dcdcdc;
+}
+
+#footer ul.icons_1, #footer ul.icons_2 {
+	/* Styling for icon lists in footer */
+	float: left;
+	width: 525px;
+	margin: 15px 10px 10px 15px;
+	padding: 0px;
+}
+
+#footer .icons_1 li, #footer .icons_2 li { 
+	/* Styling for individual list items in footer */
+	margin: 0px 0px 0px 7px; 
+	padding: 0px; 
+	list-style-type: none; 
+	display: inline; 
+}
+
+#footer a {
+	/* Link styling in footer */
+	color: #000;
+}
+
+#footer a:hover {
+	/* Hover state for footer links */
+	color: #669933;
+}
+
+#footer .credits {
+	/* Footer credits styling */
+	float: none;
+	clear: both;
+	margin: 10px 0px 20px 0px;
+	font-size: 12px;
+	text-align: center;
+}
+
+#footer .credits a {
+	/* Link styling in footer credits */
+	font-weight: normal;
+}
