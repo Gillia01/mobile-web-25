@@ -1,54 +1,121 @@
-body {
-  background-color: #121212;
-  color: #d4d4d4;
-  font-family: 'Arial', sans-serif;
+/* General Reset */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
 }
 
-.container {
-  width: 80%;
-  margin: auto;
+body {
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
   padding: 20px;
 }
 
-h1, h2, h3 {
-  color: #50fa7b;
+/* Main Resume Container - CSS Grid */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  max-width: 1000px;
+  background: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-.header {
-  text-align: center;
-  padding: 20px 0;
+/* Sidebar (Profile, Contact, Skills) */
+.sidebar {
+  background: #2C3E50;
+  color: white;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
 }
 
-.contact {
-  text-align: center;
+.sidebar h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.sidebar p {
+  font-size: 18px;
   margin-bottom: 20px;
 }
 
-.section {
-  margin-bottom: 30px;
-  padding: 20px;
-  background: #1e1e1e;
-  border-radius: 8px;
+.contact-info p {
+  margin: 10px 0;
+  font-size: 16px;
 }
 
-.skills-list {
+.contact-info a {
+  color: #1ABC9C;
+  text-decoration: none;
+}
+
+.sidebar h2 {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  font-size: 16px;
+  margin: 8px 0;
+}
+
+/* Main Content - Flexbox */
+.content {
+  padding: 30px;
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  flex-direction: column;
 }
 
-.skills-list span {
-  background: #50fa7b;
-  color: #121212;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-weight: bold;
+/* Section Headings */
+.content h2 {
+  color: #2C3E50;
+  font-size: 22px;
+  border-bottom: 2px solid #1ABC9C;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
 }
 
-.footer {
-  text-align: center;
-  padding: 20px;
-  font-size: 14px;
+/* Experience & Education Layout */
+.experience, .education, .certifications {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Job & Education Entries */
+.experience h3, .education h3 {
+  font-size: 18px;
+  color: #34495E;
+  margin-bottom: 5px;
+}
+
+.experience p, .education p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+      grid-template-columns: 1fr;
+  }
+  
+  .sidebar {
+      text-align: center;
+      align-items: center;
+  }
 }

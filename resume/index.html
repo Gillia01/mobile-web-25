@@ -5,20 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alexander Gilliam - Resume</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Alexander Gilliam",
+        "jobTitle": "Frontend Web Developer",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "1027 Columbia Street",
+            "addressLocality": "Redlands",
+            "addressRegion": "CA"
+        },
+        "email": "mailto:alexgilliam01@gmail.com",
+        "telephone": "(909) 363-5880",
+        "alumniOf": [
+            {
+                "@type": "EducationalOrganization",
+                "name": "University of Arkansas Little Rock"
+            },
+            {
+                "@type": "EducationalOrganization",
+                "name": "Arkansas State University Beebe"
+            }
+        ],
+        "knowsLanguage": ["English", "Spanish"],
+        "hasOccupation": {
+            "@type": "Occupation",
+            "name": "Frontend Web Developer"
+        },
+        "memberOf": {
+            "@type": "Organization",
+            "name": "Lincoln Elementary School",
+            "description": "IT Support for staff and students."
+        },
+        "hasCredential": [
+            {
+                "@type": "EducationalOccupationalCredential",
+                "name": "TestOut Security Pro Certification"
+            },
+            {
+                "@type": "EducationalOccupationalCredential",
+                "name": "TestOut Server Pro 2016: Install & Storage Certification"
+            }
+        ]
+    }
+    </script>
 </head>
-<body>
+<body itemscope itemtype="https://schema.org/Person">
     <div class="container">
         <aside class="sidebar">
-            <h1>Alexander Gilliam</h1>
-            <p>Frontend Web Developer</p>
+            <h1 itemprop="name">Alexander Gilliam</h1>
+            <p itemprop="jobTitle">Frontend Web Developer</p>
             <div class="contact-info">
-                <p>📍 1027 Columbia Street, Redlands, CA</p>
-                <p>📞 (909) 363-5880</p>
-                <p>📧 alexgilliam01@gmail.com</p>
+                <p>📍 <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                    <span itemprop="streetAddress">1027 Columbia Street</span>,
+                    <span itemprop="addressLocality">Redlands</span>, 
+                    <span itemprop="addressRegion">CA</span>
+                </span></p>
+                <p>📞 <span itemprop="telephone">(909) 363-5880</span></p>
+                <p>📧 <a href="mailto:alexgilliam01@gmail.com" itemprop="email">alexgilliam01@gmail.com</a></p>
             </div>
             <h2>Skills</h2>
             <ul>
-                <li>Bilingual: English & Spanish</li>
+                <li itemprop="knowsLanguage">Bilingual: English & Spanish</li>
                 <li>Windows OS & Software Applications</li>
                 <li>Basic HTML & CSS</li>
                 <li>Basic JavaScript</li>
@@ -28,11 +78,13 @@
         <main class="content">
             <section class="profile">
                 <h2>Profile</h2>
-                <p>Seeking employment within your organization, allowing me to utilize my skills to further challenge myself and grow within your organization.</p>
+                <p itemprop="description">Seeking employment within your organization, allowing me to utilize my skills to further challenge myself and grow within your organization.</p>
             </section>
             <section class="experience">
                 <h2>Experience</h2>
-                <h3>Lincoln Elementary School - Intern</h3>
+                <h3 itemprop="memberOf" itemscope itemtype="https://schema.org/Organization">
+                    <span itemprop="name">Lincoln Elementary School - Intern</span>
+                </h3>
                 <p><strong>October 2023 - Present</strong></p>
                 <ul>
                     <li>IT Support for staff and students</li>
@@ -49,18 +101,26 @@
             </section>
             <section class="education">
                 <h2>Education</h2>
-                <h3>University of Arkansas Little Rock</h3>
+                <h3 itemprop="alumniOf" itemscope itemtype="https://schema.org/EducationalOrganization">
+                    <span itemprop="name">University of Arkansas Little Rock</span>
+                </h3>
                 <p><strong>January 2023 - Present</strong></p>
                 <p>BS in Computer Science</p>
-                <h3>Arkansas State University Beebe</h3>
+                <h3 itemprop="alumniOf" itemscope itemtype="https://schema.org/EducationalOrganization">
+                    <span itemprop="name">Arkansas State University Beebe</span>
+                </h3>
                 <p><strong>August 2019 - December 2022</strong></p>
                 <p>AAS in Computer Systems & Networking Technology</p>
             </section>
             <section class="certifications">
                 <h2>Certifications</h2>
                 <ul>
-                    <li>TestOut Security Pro Certification</li>
-                    <li>TestOut Server Pro 2016: Install & Storage Certification</li>
+                    <li itemprop="hasCredential" itemscope itemtype="https://schema.org/EducationalOccupationalCredential">
+                        <span itemprop="name">TestOut Security Pro Certification</span>
+                    </li>
+                    <li itemprop="hasCredential" itemscope itemtype="https://schema.org/EducationalOccupationalCredential">
+                        <span itemprop="name">TestOut Server Pro 2016: Install & Storage Certification</span>
+                    </li>
                 </ul>
             </section>
         </main>
