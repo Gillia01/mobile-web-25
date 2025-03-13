@@ -22,6 +22,7 @@ body {
   grid-template-columns: 1fr 2fr;
   gap: 20px;
   max-width: 1000px;
+  width: 90%;
   background: white;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
@@ -112,10 +113,41 @@ body {
 @media (max-width: 768px) {
   .container {
       grid-template-columns: 1fr;
+      width: 95%;
+      max-width: 100%;
   }
   
   .sidebar {
       text-align: center;
       align-items: center;
+      padding: 20px;
+  }
+
+  .contact-info p {
+      font-size: 14px;
+  }
+
+  .sidebar h1 {
+      font-size: 22px;
+  }
+
+  .content {
+      padding: 20px;
+  }
+
+  .content h2 {
+      font-size: 20px;
+  }
+
+  .experience h3, .education h3 {
+      font-size: 16px;
+  }
+
+  .experience p, .education p {
+      font-size: 14px;
+  }
+
+  .sidebar ul li {
+      font-size: 14px;
   }
 }
