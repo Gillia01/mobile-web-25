@@ -110,44 +110,88 @@ body {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+
+/* Tablet View: 769px - 1024px */
+@media (max-width: 1024px) {
   .container {
-      grid-template-columns: 1fr;
-      width: 95%;
-      max-width: 100%;
+    width: 95%;
+    grid-template-columns: 1fr; /* Stack on smaller tablets */
   }
-  
+
   .sidebar {
-      text-align: center;
-      align-items: center;
-      padding: 20px;
-  }
-
-  .contact-info p {
-      font-size: 14px;
-  }
-
-  .sidebar h1 {
-      font-size: 22px;
+    text-align: center;
+    align-items: center;
+    padding: 25px;
   }
 
   .content {
-      padding: 20px;
+    padding: 25px;
   }
 
   .content h2 {
-      font-size: 20px;
+    font-size: 20px;
   }
 
-  .experience h3, .education h3 {
-      font-size: 16px;
+  .sidebar h1 {
+    font-size: 22px;
   }
 
-  .experience p, .education p {
-      font-size: 14px;
+  .contact-info p {
+    font-size: 15px;
   }
 
   .sidebar ul li {
-      font-size: 14px;
+    font-size: 15px;
+  }
+
+  .experience h3, .education h3 {
+    font-size: 17px;
+  }
+
+  .experience p, .education p {
+    font-size: 15px;
+  }
+}
+
+/* Mobile View: 768px and below */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    width: 95%;
+    max-width: 100%;
+  }
+  
+  .sidebar {
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .contact-info p {
+    font-size: 14px;
+  }
+
+  .sidebar h1 {
+    font-size: 22px;
+  }
+
+  .content {
+    padding: 20px;
+  }
+
+  .content h2 {
+    font-size: 20px;
+  }
+
+  .experience h3, .education h3 {
+    font-size: 16px;
+  }
+
+  .experience p, .education p {
+    font-size: 14px;
+  }
+
+  .sidebar ul li {
+    font-size: 14px;
   }
 }
