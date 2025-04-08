@@ -6,28 +6,77 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Alex Gilliam | Mobile Web 2025</title>
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Flexbox nav styles */
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 0;
+            margin: 20px auto;
+            list-style: none;
+            justify-content: center;
+            max-width: 1000px;
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            background-color: #1e90ff;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #0056b3;
+        }
+
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #000; /* Black background */
+            color: white; /* White text for readability */
+        }
+
+        header, footer {
+            background-color: #111; /* Darker gray-black for contrast */
+            padding: 1.5em 0;
+        }
+
+        header h1, footer p {
+            margin: 0;
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Alex Gilliam</h1>
     </header>
-
     <nav>
         <ul>
             <li><a href="pre-assessment/index.html">Pre-Assessment</a></li>
             <li><a href="semantic-html/index.html">Semantic HTML</a></li>
             <li><a href="template/index.html">Template</a></li>
             <li><a href="css-grid-exercise-1/index.html">CSS Grid</a></li>
-            <li><a href="custom-grid/index.html">Custom-grid </a></li>
+            <li><a href="custom-grid/index.html">Custom-grid</a></li>
             <li><a href="resume/index.html">Resume</a></li>
             <li><a href="resume-schema/index.html">Schema</a></li>
             <li><a href="resume-jsonld">Json</a></li>
             <li><a href="flex-defense.PNG">Flexbox</a></li>
             <li><a href="final-site-planning/questionnaire/index.html">Questionnaire</a></li>
             <li><a href="figma-prototype/index.html">Website Prototype</a></li>
+            <li><a href="rapid-prototype/index.html">Rapid Prototype</a></li>
         </ul>
     </nav>
-
     <footer>
         <p>&copy; 2025 Alex Gilliam</p>
     </footer>
