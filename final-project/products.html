@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shop - SoleStyle</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>SoleStyle</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Shop</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="filters">
+      <h2>Filter Products</h2>
+      <form action="">
+        <label for="brands">Brand</label>
+        <select name="brands" id="brands">
+          <option value="nike">Nike</option>
+          <option value="adidas">Adidas</option>
+          <option value="puma">Puma</option>
+        </select>
+        <label for="size">Size</label>
+        <select name="size" id="size">
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+        <button type="submit" class="btn">Apply Filters</button>
+      </form>
+    </section>
+
+    <section class="product-listing">
+      <h2>All Products</h2>
+      <div class="product-card">
+        <img src="images/shoe1.jpg" alt="Shoe 1">
+        <h3>Comfort Sneaker</h3>
+        <p>$59.99</p>
+        <a href="product.html" class="btn">View Details</a>
+      </div>
+      <div class="product-card">
+        <img src="images/shoe2.jpg" alt="Shoe 2">
+        <h3>Running Shoes</h3>
+        <p>$89.99</p>
+        <a href="product.html" class="btn">View Details</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 SoleStyle. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
