@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Image Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 2rem;
+    }
+    img {
+      width: 100%;
+      max-width: 800px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Responsive Image Demo</h1>
+  <p>This demo uses the <code>&lt;picture&gt;</code> element to load different images based on screen size.</p>
+
+  <picture>
+    <!-- Image for large screens -->
+    <source media="(min-width: 1024px)" srcset="images/beach-large.jpg" />
+    
+    <!-- Image for medium screens -->
+    <source media="(min-width: 600px)" srcset="images/beach-medium.jpg" />
+
+    <!-- Fallback for small screens -->
+    <img src="images/beach-small.jpg" alt="Beach view" />
+  </picture>
+
+  <p>Resize the browser window to see the image change based on the screen width.</p>
+
+</body>
+</html>
