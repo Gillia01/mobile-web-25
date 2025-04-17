@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Media Examples</title>
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+    h1 {
+      color: #333;
+    }
+    .media-section {
+      margin-bottom: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>HTML5 Audio & Video Examples</h1>
+
+  <div class="media-section">
+    <h2>Basic HTML5 Audio</h2>
+    <audio controls>
+      <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+  <div class="media-section">
+    <h2>Basic HTML5 Video</h2>
+    <video controls width="640">
+      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <div class="media-section">
+    <h2>Plyr.js Custom Video Player</h2>
+    <video id="player" playsinline controls>
+      <source src="https://cdn.plyr.io/static/blank.mp4" type="video/mp4" />
+      <source src="https://cdn.plyr.io/static/blank.webm" type="video/webm" />
+    </video>
+  </div>
+
+  <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+  <script>
+    const player = new Plyr('#player');
+  </script>
+
+</body>
+</html>
