@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" itemscope itemtype="https://schema.org/Product">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Product Detail - SoleStyle</title>
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 </head>
 <body>
   <header>
@@ -21,19 +22,29 @@
 
   <main>
     <section class="product-detail">
-      <img src="images/shoe1-large.jpg" alt="Comfort Sneaker">
+      <picture>
+        <source srcset="images/shoe1-large.webp" type="image/webp" />
+        <source srcset="images/shoe1-large.jpg" type="image/jpeg" />
+        <img src="images/shoe1-large.jpg" alt="Comfort Sneaker" itemprop="image" />
+      </picture>
+
       <div class="product-info">
-        <h2>Comfort Sneaker</h2>
-        <p>$59.99</p>
-        <p>High-quality sneaker for maximum comfort and style. Perfect for all-day wear.</p>
+        <h2 itemprop="name">Comfort Sneaker</h2>
+        <p itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+          Price: <span itemprop="priceCurrency" content="USD">$</span><span itemprop="price">59.99</span>
+          <link itemprop="availability" href="https://schema.org/InStock" />
+        </p>
+        <p itemprop="description">High-quality sneaker for maximum comfort and style. Perfect for all-day wear.</p>
+        
         <label for="size">Choose Size:</label>
-        <select name="size" id="size">
+        <select name="size" id="size" required>
           <option value="7">7</option>
           <option value="8">8</option>
           <option value="9">9</option>
           <option value="10">10</option>
         </select>
-        <button class="btn">Add to Cart</button>
+        
+        <button id="addToCartBtn" class="btn">Add to Cart</button>
       </div>
     </section>
   </main>
@@ -41,5 +52,12 @@
   <footer>
     <p>&copy; 2025 SoleStyle. All rights reserved.</p>
   </footer>
+
+  <script>
+
+    document.getElementById("addToCartBtn")?.addEventListener("click", () => {
+      alert("Item added to cart! (future JS functionality)");
+    });
+  </script>
 </body>
 </html>

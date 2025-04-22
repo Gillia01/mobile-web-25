@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" itemscope itemtype="https://schema.org/Store">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shop - SoleStyle</title>
   <link rel="stylesheet" href="css/styles.css" />
 </head>
@@ -42,16 +42,22 @@
 
     <section class="product-listing">
       <h2>All Products</h2>
-      <div class="product-card">
-        <img src="images/shoe1.jpg" alt="Shoe 1">
-        <h3>Comfort Sneaker</h3>
-        <p>$59.99</p>
+      <div class="product-card" itemscope itemtype="https://schema.org/Product">
+        <img src="images/shoe1.jpg" alt="Comfort Sneaker" itemprop="image">
+        <h3 itemprop="name">Comfort Sneaker</h3>
+        <p itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+          Price: <span itemprop="priceCurrency" content="USD">$</span><span itemprop="price">59.99</span>
+          <link itemprop="availability" href="https://schema.org/InStock" />
+        </p>
         <a href="product.html" class="btn">View Details</a>
       </div>
-      <div class="product-card">
-        <img src="images/shoe2.jpg" alt="Shoe 2">
-        <h3>Running Shoes</h3>
-        <p>$89.99</p>
+      <div class="product-card" itemscope itemtype="https://schema.org/Product">
+        <img src="images/shoe2.jpg" alt="Running Shoes" itemprop="image">
+        <h3 itemprop="name">Running Shoes</h3>
+        <p itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+          Price: <span itemprop="priceCurrency" content="USD">$</span><span itemprop="price">89.99</span>
+          <link itemprop="availability" href="https://schema.org/InStock" />
+        </p>
         <a href="product.html" class="btn">View Details</a>
       </div>
     </section>
@@ -60,6 +66,12 @@
   <footer>
     <p>&copy; 2025 SoleStyle. All rights reserved.</p>
   </footer>
+
+  <script>
+    // Example future JS functionality for interactivity
+    document.getElementById("brands")?.addEventListener("change", () => {
+      console.log("Brand filter applied");
+    });
+  </script>
 </body>
 </html>
-

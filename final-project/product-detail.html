@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" itemscope itemtype="https://schema.org/Product">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Product Details</title>
+  <title>Product Details - SoleStyle</title>
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 </head>
 <body>
   <header>
@@ -20,16 +21,33 @@
 
   <main>
     <section class="product-detail">
-      <h1>Product Name</h1>
-      <img src="product-image.jpg" alt="Product Image" />
-      <p>Description of the product...</p>
-      <p>Price: $99.99</p>
-      <button>Add to Cart</button>
+      <h1 itemprop="name">Product Name</h1>
+
+      <picture>
+        <source srcset="images/product-image.webp" type="image/webp" />
+        <source srcset="images/product-image.jpg" type="image/jpeg" />
+        <img src="images/product-image.jpg" alt="Product Image" itemprop="image" />
+      </picture>
+
+      <p itemprop="description">Description of the product...</p>
+      <p itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+        Price: <span itemprop="priceCurrency" content="USD">$</span><span itemprop="price">99.99</span>
+        <link itemprop="availability" href="https://schema.org/InStock" />
+      </p>
+      
+      <button id="addToCartBtn">Add to Cart</button>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Shoe Store</p>
+    <p>&copy; 2025 SoleStyle. All rights reserved.</p>
   </footer>
+
+  <script>
+    // Progressive Enhancement: JS fallback placeholder
+    document.getElementById("addToCartBtn")?.addEventListener("click", () => {
+      alert("Item added to cart! (future JS functionality)");
+    });
+  </script>
 </body>
 </html>
