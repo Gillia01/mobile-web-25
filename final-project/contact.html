@@ -1,69 +1,53 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Kick's</title>
-    <!-- Favicon for desktop -->
-    <link rel="icon" type="image/png" sizes="32x32" href="img/icons8-shoe-pastel-glyph-32.png">
-    <link rel="icon" type="image/png" sizes="48x48" href="img/favicon-48x48.png">
-
-    <!-- Mobile Safari (iOS Home Screen Icon) -->
-    <link rel="apple-touch-icon" href="img/icons8-shoe-pastel-glyph-32.png">
-
-    <link rel="stylesheet" href="css/styles.css"/>
+    <title>Contact Us - My E-Commerce Store</title>
+    <link rel="icon" href="images/icons8-shoe-pastel-glyph-32.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="modernizr-custom.js" defer></script>
+    <script src="script.js" defer></script>
 </head>
-
 <body>
     <header>
-        <div class="logo-nav">
-            <div class="logo">
-                <img src="img/icons8-shoe-pastel-glyph-32.png" alt="Shoe logo" />
-                <h1>Kick's</h1>
-            </div>
-
-            <button id="menu-toggle" aria-controls="nav" aria-expanded="false">
-                ☰
-                <span class="visually-hidden">Toggle navigation</span>
-            </button>
-        </div>
-
-        <nav id ="nav">
+        <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="shop.html">Shop</a></li>
-                <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section>
+        <section class="contact">
             <h2>Contact Us</h2>
-            <p>If you have any questions, feel free to reach out! We're here to help.</p>
+            <form action="#" method="post" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
 
-            <form action="submit_form.php" method="POST">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                </div>
 
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-
-                <button type="submit">Send Message</button>
+                <div class="form-group">
+                    <button type="submit">Send Message</button>
+                </div>
             </form>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Footwear Store</p>
+        <p>&copy; 2025 My E-Commerce Store. All rights reserved.</p>
     </footer>
-    <script src="js/main.js" defer></script>
-
 </body>
-
 </html>

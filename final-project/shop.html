@@ -1,73 +1,60 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> Shop - Kick's</title>
-        <!-- Favicon for desktop -->
-    <link rel="icon" type="image/png" sizes="32x32" href="img/icons8-shoe-pastel-glyph-32.png">
-    <link rel="icon" type="image/png" sizes="48x48" href="img/favicon-48x48.png">
-
-    <!-- Mobile Safari (iOS Home Screen Icon) -->
-    <link rel="apple-touch-icon" href="img/icons8-shoe-pastel-glyph-32.png">
-
-        <link rel="stylesheet" href="css/styles.css"/>
-    </head>
-
-    <body>
-        <header>
-            <div class="logo-nav">
-                <div class="logo">
-                    <img src="img/icons8-shoe-pastel-glyph-32.png" alt="Shoe logo" />
-                    <h1>Kick's</h1>
-            </div>
-            <button id="menu-toggle" aria-controls="nav" aria-expanded="false">
-                ☰
-                <span class="visually-hidden">Toggle navigation</span>
-            </button>
-        </div>
-
-        <nav id ="nav">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - My E-Commerce Store</title>
+    <link rel="icon" href="images/icons8-shoe-pastel-glyph-32.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="modernizr-custom.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="shop.html">Shop</a></li>
-                <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
+    </header>
 
-        </header>
+    <main>
+        <section class="products">
+            <h2>Shop Our Products</h2>
+            <div class="product-list">
+                <!-- Example Product 1 -->
+                <div class="product" itemscope itemtype="http://schema.org/Product">
+                    <img src="images/shoes-1.jpg" alt="Running Shoes" itemprop="image" srcset="images/shoes-1-320w.jpg 320w, images/shoes-1-640w.jpg 640w, images/shoes-1.jpg 1024w" sizes="(max-width: 480px) 320px, (max-width: 768px) 640px, 1024px">
+                    <h3 itemprop="name">Running Shoes</h3>
+                    <p class="price" itemprop="price">$50</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
 
-        <main>
-            <h2> Shop Our Footwear</h2>
-            <div class="product-grid">
-                <!-- Products go here-->
+                <!-- Example Product 2 -->
+                <div class="product" itemscope itemtype="http://schema.org/Product">
+                    <img src="images/shoes-2.jpg" alt="Casual Sneakers" itemprop="image" srcset="images/shoes-2-320w.jpg 320w, images/shoes-2-640w.jpg 640w, images/shoes-2.jpg 1024w" sizes="(max-width: 480px) 320px, (max-width: 768px) 640px, 1024px">
+                    <h3 itemprop="name">Casual Sneakers</h3>
+                    <p class="price" itemprop="price">$40</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
 
-                <article class="product">
-                    <img src="images/shoes-1.jpg " alt="White high-top sneaker" />
-                    <h3>High Top Sneaker</h3>
-                    <p>$119.99 </p>
-                    <button>Add to Cart</button>
-                </article>
-                <article class="product">
-                    <img src="images/shoes-2.jpg" alt="Black running sneaker"/>
-                    <h3>Runner Sneaker</h3>
-                    <p>$74.99</p>
-                    <button>Add to Cart</button>
-                </article>
-                <article class="product">
-                    <img src="images/shoes-3.jpg" alt="Casual sneaker"/>
-                    <h3>Casual Shoe</h3>
-                    <p>$99.99</p>
-                    <button>Add to Cart</button>
-                </article>
+                <!-- Example Product 3 -->
+                <div class="product" itemscope itemtype="http://schema.org/Product">
+                    <img src="images/shoes-3.jpg" alt="Sports Sneakers" itemprop="image" srcset="images/shoes-3-320w.jpg 320w, images/shoes-3-640w.jpg 640w, images/shoes-3.jpg 1024w" sizes="(max-width: 480px) 320px, (max-width: 768px) 640px, 1024px">
+                    <h3 itemprop="name">Sports Sneakers</h3>
+                    <p class="price" itemprop="price">$55</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+
+                
             </div>
-        </main>
-        
-        <footer>
-            <p>&copy; 2025 Footwear Store</p>
-        </footer>
-        <script src="js/main.js" defer></script>
+        </section>
+    </main>
 
-    </body>
+    <footer>
+        <p>&copy; 2025 My E-Commerce Store. All rights reserved.</p>
+    </footer>
+</body>
 </html>
